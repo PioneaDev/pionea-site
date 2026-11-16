@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://pioneagames.com/sitemap.xml
