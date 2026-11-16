@@ -79,6 +79,22 @@ section{padding-block:clamp(44px,6vw,84px)}
 .shots figcaption{font-family:var(--sans);font-size:1rem;line-height:1.4;margin-top:16px;color:#CFDCD8;font-weight:500}
 @media (min-width:980px){.shots{overflow:visible;justify-content:space-between}.shots figure.item{flex:1 1 0;max-width:260px}.shots figure.item:nth-child(even){margin-top:56px}}
 
+/* mosaïque d'art */
+.mosaic{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(8px,1.4vw,14px);margin-top:30px}
+.mosaic .tile{aspect-ratio:1;border-radius:clamp(14px,2vw,22px);display:grid;place-items:center;overflow:hidden;background:var(--basalt)}
+.mosaic .tile img{width:78%;height:78%;object-fit:contain}
+.mosaic .big{grid-column:span 2;grid-row:span 2}
+.mosaic .big img{width:84%;height:84%}
+.mosaic .t2{background:var(--lagoon)}
+.mosaic .t3{background:var(--paper);box-shadow:inset 0 0 0 1.5px var(--mist)}
+.mosaic .t4{background:var(--beacon)}
+.mosaic .tile:nth-child(n+14){display:none}
+@media (min-width:760px){
+  .mosaic{grid-template-columns:repeat(6,1fr)}
+  .mosaic .tile:nth-child(n+14){display:grid}
+}
+.credit{font-family:var(--sans);font-size:.95rem;color:var(--soft);margin:16px 0 0}
+
 /* studio */
 .studio{display:grid;gap:28px 64px}
 @media (min-width:900px){.studio{grid-template-columns:.8fr 1.2fr}}
